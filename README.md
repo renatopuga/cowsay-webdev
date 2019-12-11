@@ -14,7 +14,24 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 by Renato Puga
 ```
 
-Pegue o último código na página da FIAP 
+Pegue o último código na página da FIAP e execute as etapas do `npm install` e `npm start`. Pronto! Agora você utilizará o projeto do professor.
+
+Se preferir usar um glitch próprio é só seguir as etapas do glitch abaixo e mudar dois arquivos .js:
+
+### `App.js`:
+
+```java
+# adicione o seu URL do glitch
+fetch("https://puga-produtos.glitch.me/getProdutos")
+```
+
+### `addproduto.js`
+
+```java
+# adicione o seu URL do glitch
+state = {action: 'https://puga-produtos.glitch.me/addProduto',
+```
+
 
 
 # glitch
