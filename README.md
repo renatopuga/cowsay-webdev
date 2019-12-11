@@ -14,7 +14,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 by Renato Puga
 ```
 
-Pegue o último código na página da FIAP e execute as etapas do `npm install` e `npm start`. Pronto! Agora você utilizará o projeto do professor.
+Pegue o último código na página da FIAP e execute as etapas do `npm install` e `npm start`. 
+Pronto! Agora você utilizará o projeto do professor.
+
+### Se tudo der certo: `http://localhost:3000`
+![GitHub Logo](fig01.png)
 
 Se preferir usar um glitch próprio é só seguir as etapas do glitch abaixo e mudar dois arquivos .js:
 
@@ -36,6 +40,7 @@ state = {action: 'https://puga-produtos.glitch.me/addProduto',
 
 # glitch
 Glitch is the friendly community where everyone builds the web: https://glitch.com/
+
 Vamos usar como nosso servidor web sql-lite que produzi uma url válida que vamos utilizar no react.
 
 Então, crie uma conta e clique:
