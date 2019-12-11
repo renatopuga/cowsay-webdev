@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Produtos from './components/produtos';
+import AddProduto from './components/addproduto';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+	state = {produtos: []}
+
+	componentDidMount() {
+		fetch("https://puga-produtos.glitch.me/getProdutos")
+		.then(resposta => resposta.json())
+		.then((dados) => {
+			this.setState({produtos: dados});
+			console.log(this.state.produtos);
+		})
+		.catch(console.log);
+	}
+	
+	render() {
+	  return (
+		<div className="App container">
+			<Produtos parametro={this.state.produtos} />
+			<AddProduto />
+		</div>
+	  );
+	}
 }
 
 export default App;
