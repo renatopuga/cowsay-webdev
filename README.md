@@ -3,7 +3,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # cowsay WebDev
 
 # glitch
+Glitch is the friendly community where everyone builds the web: https://glitch.com/
+Vamos usar como nosso servidor web sql-lite que produzi uma url válida que vamos utilizar no react.
 
+Então, crie uma conta e clique:
+
+### `New Project > hello-sqlite`
 
 ## Estrutura de Diretórios
 
