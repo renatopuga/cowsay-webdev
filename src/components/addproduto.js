@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
-import NumberFormat from 'react-number-format';
 
 class AddProduto extends Component {
 	
-	state = {nome: '',
+	state = {action: 'https://puga-produtos.glitch.me/addProduto',
+			 method: 'POST',
+			 nome: '',
 			 preco: '',
 			 foto_url: ''}
 	
 	constructor(props, context){
 		super(props,context);
+		this.onSubmit = this.onSubmit.bind(this);
 		this.onChange = this.onChange.bind(this);
 	}
 	
@@ -20,6 +22,23 @@ class AddProduto extends Component {
 		}
 		
 		console.log(dados);
+		
+		return fetch(this.state.action,
+				{method: this.state.method,
+				body: JSON.stringify(dados),
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json'
+				}
+				}).then(response => {
+					if(response.status === 200){
+						window.location.reload();
+					}else {
+						console.log("Erro: Response status");
+					}
+				}).catch(erro => {
+					console.log(erro)
+				});
 	}
 	
 	onChange(e){
@@ -49,7 +68,7 @@ class AddProduto extends Component {
 				<input type="text" id="foto_url" className="form-control" onChange={this.onChange}/>				
 			</div>
 			<div className="align-right">
-				<button onClick={this.onSubmit}>Adicionar Produto</button>
+				<button onClick={this.onSubmit} className="btn btn-primary">Adicionar Produto</button>
 			</div>
 		</div>
 		);					
