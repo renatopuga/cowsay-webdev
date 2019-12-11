@@ -8,12 +8,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Estrutura de Diretórios
 
 * public/
-** client.js
-** style.css
+ ** client.js
+ ** style.css
 * public/
-** index.html
-package.json
-server.js
+ ** index.html
+ package.json
+ server.js
 
 
 
